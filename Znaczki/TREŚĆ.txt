@@ -1,0 +1,88 @@
+=== Zadanie znaczki pocztowe ===
+
+Pomó¿ filateliœcie stworzyæ program wspomagaj¹cy jego hobby.
+Filatelista ma plik tekstowy zawieraj¹cy listê znaczków. Ka¿dy wiersz
+tego pliku opisuje jeden znaczek w formacie: nazwa znaczka, wartoœæ
+znaczka, rok wydania znaczka, nazwa kraju lub poczty wydaj¹cej
+znaczek. Poszczególne pola s¹ rozdzielone odstêpami, które mog¹
+pojawiæ siê te¿ na pocz¹tku lub na koñcu wiersza. Nazwa znaczka
+i nazwa kraju lub poczty wydaj¹cej znaczek równie¿ mog¹ zawieraæ
+odstêpy. Program czyta ze standardowego wejœcia plik z list¹ znaczków,
+a nastêpnie zapytania. Ka¿de zapytanie jest w osobnym wierszu
+i zawiera dwie liczby rozdzielone odstêpem, oznaczaj¹ce przedzia³ lat.
+Na pocz¹tku lub na koñcu wiersza te¿ mo¿e pojawiæ siê odstêp. Dla
+ka¿dego zapytania program wypisuje posortowan¹ informacjê o znaczkach
+wydanych w podanym przedziale lat, w formacie: rok wydania znaczka,
+nazwa kraju lub poczty wydaj¹cej znaczek, wartoœæ znaczka, nazwa
+znaczka. Informacja o ka¿dym znaczku jest wypisywana w osobnym
+wierszu, bez odstêpów na pocz¹tku i koñcu wiersza, a wszystkie
+odstêpy wewn¹trz wiersza s¹ zamieniane na pojedyncz¹ spacjê.
+
+Program musi byæ odporny na niezgodnoœæ formatu danych wejœciowych ze
+specyfikacj¹. Dla ka¿dego niezgodnego ze specyfikacj¹ wiersza, który
+pojawia siê na standardowym wejœciu, program wypisuje na standardowe
+wyjœcie b³êdów komunikat w formacie:
+
+Error in line N:WIERSZ
+
+gdzie N jest numerem b³êdnego wiersza (wiersze s¹ numerowane od 1),
+a WIERSZ to b³êdny wiersz w oryginalnej postaci (z dok³adnym
+zachowaniem wszystkich odstêpów), w jakiej zosta³ wczytany przez
+program.
+
+Przyk³adowo, dla danych wejœciowych:
+
+Franklin Z-Grill ONE CENT 930000 1867 U.S.POSTAGE
+znaczek   polski
+One Cent Black on Magenta ONE CENT  935000 1856  British Guiana
+One Penny 1072260 1847 Mauritius
+ Two Pence 1148850 1847 Mauritius
+Inverted Jenny 24 CENTS 977500 1918 U.S.POSTAGE
+Three-Skilling Yellow 2300000 1855 SVERIGE
+Pomidor 1 1971 Poczta Polska
+Brzoza 1,50 1971 Poczta Polska
+Buk 0,50 1971 Poczta Polska
+Dynia 1 1971 Poczta Polska
+queen's slipper 3.00 1999 Kanada
+1855 1856
+1847 1847
+Trawa 2 1971 Poczta Polska
+1970 1972
+2000 1999
+
+program wypisuje na standardowym wyjœciu:
+
+1855 SVERIGE 2300000 Three-Skilling Yellow
+1856 British Guiana 935000 One Cent Black on Magenta ONE CENT
+1847 Mauritius 1072260 One Penny
+1847 Mauritius 1148850 Two Pence
+1971 Poczta Polska 0,50 Buk
+1971 Poczta Polska 1 Dynia
+1971 Poczta Polska 1 Pomidor
+1971 Poczta Polska 1,50 Brzoza
+
+a na standardowym wyjœciu b³êdów:
+
+Error in line 2:znaczek   polski
+Error in line 15:Trawa 2 1971 Poczta Polska
+Error in line 17:2000 1999
+
+Oczekiwane rozwi¹zanie nie powinno zawieraæ definicji w³asnych
+struktur i klas. Zamiast tego nale¿y intensywnie korzystaæ
+z kontenerów i algorytmów dostarczanych przez standardow¹ bibliotekê
+jêzyka C++. W szczególnoœci do sortowania i wyszukiwania nale¿y u¿yæ
+efektywnych algorytmów. Zapytañ o przedzia³y lat mo¿e byæ du¿o.
+Rozwi¹zanie nale¿y umieœciæ w pliku znaczki.cc, który nale¿y umieœciæ
+w repozytorium w katalogu
+
+grupaN/zadanie1/ab123456+cd123456
+
+lub
+
+grupaN/zadanie1/ab123456+cd123456+ef123456
+
+gdzie N jest numerem grupy, a ab123456, cd123456, ef123456 s¹
+identyfikatorami cz³onków zespo³u umieszczaj¹cego to rozwi¹zanie.
+Katalog z rozwi¹zaniem nie powinien zawieraæ innych plików, ale mo¿e
+zawieraæ podkatalog private, gdzie mo¿na umieszczaæ ró¿ne pliki, np.
+swoje testy. Pliki umieszczone w tym podkatalogu nie bêd¹ oceniane.
